@@ -1,0 +1,2 @@
+# Schedbot
+Python Schedule Bot.
