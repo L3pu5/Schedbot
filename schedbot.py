@@ -88,13 +88,14 @@ def serve_events(now: datetime):
 # Main function loop
 def serve():
     # Check time
-    now = datetime.now()
-    # Check if time is a multiple of 30 or 00
-    if( now.minute == 30 or now.minute == 0):
-        serve_events(now)
-        time.sleep(60*25)
-    else:
-        time.sleep(55)
+    while True:
+        now = datetime.now()
+        # Check if time is a multiple of 30 or 00
+        if( now.minute == 30 or now.minute == 0):
+            serve_events(now)
+            time.sleep(60*25)
+        else:
+            time.sleep(55)
 
 # Entry
 def main():
